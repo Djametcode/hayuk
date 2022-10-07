@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    
+    * {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    body {
+      margin: 0;
+    }
+    #flex-container {
+      background-color: slateGrey;
+      padding: 10px;
+      display: block;
+      color: slateGrey;
+      text-align: center;
+      background-color: whiteSmoke;
+    }
+    #flex-container h1 {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 0;
+      box-shadow: 2px 2px 15px grey;
+      position: relative;
+      z-index: 2;
+    }
+    #nav {
+      display: none;
+      visibility: hidden;
+      width: 100%;
+      border-radius: 10px;
+      background-color: white;
+      margin-top: 10px;
+      box-shadow: 2px 2px 15px grey;
+      position: relative;
+      z-index: 1;
+      animation: nav 1s alternate linear;
+    }
+    
+    @keyframes nav {
+      0% {transform: translateY(-50px)}
+      50% {transform: translateY(0px)}
+      100% {}
+    }
+    #nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #nav li {
+      margin: 0;
+    }
+    #nav a {
+      color: slateGrey;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+    #nav a:hover {
+      background-color: black;
+      border-radius: 10px;
+      color: white;
+    }
+    #hamburger {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="flex-container">
+        
+        <h1><span id="hamburger" onclick="sidebar()">&#9776;</span>DjametCoder</h1>
+        <div id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Game</a></li>
+            <li><a href="#">Lesson</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="flex-main">
+        <div id="form">
+          <form id="form">
+          <input type="text" placeholder="Masukan Namamu">
+          <input type="text" placeholder="Asal mana?"><br>
+          <input type="date">
+          <input type="submit" value="Mulai">
+          </form>
+        </div>
+        
+      </div>
+    </main>
+    
+    
+    <script>
+    function sidebar() {
+      const element = document.getElementById('nav');
+      element.style.visibility = 'visible';
+      element.style.display = 'content';
+    }
+    
+    </script>
+  </body>
+</html>
